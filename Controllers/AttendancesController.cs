@@ -2,6 +2,7 @@
 using Microsoft.AspNet.Identity;
 using System.Linq;
 using System.Web.Http;
+using GigHub.Dtos;
 
 namespace GigHub.Controllers
 {
@@ -16,7 +17,7 @@ namespace GigHub.Controllers
         }
 
         [HttpPost]
-        public IHttpActionResult Attend(Attendance dto)
+        public IHttpActionResult Attend(AttendanceDto dto)
         {
             var userId = User.Identity.GetUserId();
 
